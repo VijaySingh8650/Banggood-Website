@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    height: 100px;
+    width: auto;
+    background-color: #2D2D38;
+    position: relative;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top:12px;
+    position: relative;
+}
+.navbar-img{
+    width: 160px;
+    height: 50px;
+}
+#searchBar{
+    width: 450px;
+    height: 35px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline:none;
+    color: rgb(167, 167, 167);
+    padding-left: 20px;
+    
+   
+}
+.imgShip{
+    height: 12px;
+    width: 20px;
+    
+}
+.ship p{
+    color: #FFFFFF99;
+}
+.hello p{
+    color: #FFFFFF99;
+}
+  
+.hello{
+   
+    width: 80px;
+}
+.ship span{
+    color: white;
+    
+}
+
+.hello span{
+   line-height: -0.5;
+    color: white;
+  
+}
+p,span{
+    font-size: 13px;
+}
+
+
+
+.form{
+    display: flex;
+    justify-content: space-between;
+}
+.form > div{
+    
+    height: 35px;
+    width: 40px;
+    background-color: #ff6e26;
+    border-radius: 0 5px 5px 0;
+    
+}
+.form > div > img{
+    cursor: pointer;
+    margin: 5px 0  0 5px;
+    color: white;
+}
+.home{
+    display: flex;
+}
+.number{
+    background-color: #ff6e26;
+    height: 25px;
+    width: 35px;
+    border-radius: 15px 15px 15px 15px;
+    position: absolute;
+    right: 15px;
+
+}
+.number > h1{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -2px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.collection_box{
+    display: flex;
+    width: 18%;
+    height: 25%;
+    justify-content: space-between;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    transition: 0.3s;
+    border-radius: 5px 5px 0 0;
+    
+}
+.collection_box > span{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    left:40px;
+    top: 3px;
+
+} 
+.collection_box >img:nth-child(1){
+    margin-left: 10px;
+}
+.collection_box >span+img{
+    margin-right: 10px;
+}
+.collection_box:hover span{
+    color: #ff6e26;
+}
+.collection_box:hover img:nth-child(1){
+    background-image: url("Images Index/menu-line-orange.svg");
+    background-size: cover;
+    
+    
+
+}
+.collection_box:hover span+img{
+    background-image: url("Images Index/arrow-right-orange.svg");
+    background-size: cover;
+}
+.collection_box:hover{
+    background-color: white;
+
+}
+
+
+
+
+
+
+
