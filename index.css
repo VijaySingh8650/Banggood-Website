@@ -120,11 +120,12 @@ a{
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 700;
+    letter-spacing: 2px;
     color: white;
     position: absolute;
     left:40px;
     top: 3px;
-
+    
 } 
 .collection_box >img:nth-child(1){
     margin-left: 10px;
@@ -148,11 +149,168 @@ a{
 }
 .collection_box:hover{
     background-color: white;
+    cursor: pointer;
 
+}
+.collection>div:nth-child(2){
+
+    width: auto;
+    position: absolute;
+    bottom: 5px;
+    
+    margin-left:240px;
+    
+}
+.collection>div:nth-child(2)> span{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    margin-right: 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.collection>div:nth-child(2)> span:hover{
+    color: #ff6e26;
+}
+.form{
+    position: relative;
+
+}
+.part2{
+    height: 100vh;
+    width: 100%;
+    background-color: #e2d9d9;
+    display: flex;
+    padding-bottom: 15px;
+}
+.names{
+    background-color: #ffffff;
+    width: 20%;
+    border: 1px solid red;
+   
+}
+.names > p{
+    margin: 20px;
+}
+.pictures{
+    width: 60%;
+    padding: 15px;
+    height: auto;
 }
 
 
 
+/* .carousel-container{
+    overflow: hidden;
+} */
+.slide-image{
+    height:300px;
+    background-image: url("https://imgaz.staticbg.com/banggood/os/202204/20220430010554_721.jpg");
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    animation: slider 20s 10s infinite normal;
+}
+
+@keyframes slider{
+    0%{ background-image: url("https://imgaz.staticbg.com/banggood/os/202204/20220430010554_721.jpg");}
+    20%{background-image: url("https://imgaz.staticbg.com/banggood/os/202204/20220429215316_864.jpg.webp");}
+    40%{background-image: url("https://imgaz.staticbg.com/banggood/os/202204/20220430010141_211.jpg.webp");}
+    60%{background-image: url("https://imgaz.staticbg.com/banggood/os/202204/20220429040023_845.jpg.webp");}
+    75%{background-image: url("https://imgaz.staticbg.com/banggood/os/202204/20220427013917_455.jpg.webp");}
+}
+.login{
+    width: 20%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    position: relative;
+    border: 1px solid red;
+}
+.login>.imageBottom{
+    position: absolute;
+    bottom: 0;
+}
+.imageTop{
+    height: 80px;
+}
+.login>.imageTop{
+    transform: rotate(180deg);
+   
+}
+.login>.imageBottom+div{
+    height: 50px;
+    width: auto;
+    /* border: 1px solid red; */
+   border-radius: 100%;
+   background-color: white;
+  
+   position: absolute;
+   top: 30px;
+   left: 100px;
+
+}
+.login>.imageBottom+div>img{
+    height: 50px;
+    border-radius: 100%;
+}
+.login>.imageBottom+div+h1{
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+    
+}
+.login>.btn{
+    margin: 40px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.login>.btn>#btnJoin{
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px;
+    background-color: #ff6e26;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    cursor: pointer;
+}
+.login>.btn>#btnSign{
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100px;
+    border:1px solid #ebedf0 ;
+}
+.service>div{
+    display: flex;
+    margin-left: 15px;
+}
+.service>div>img{
+   height: 20px;
+   width: 20px;
+}
+.service>h1{
+    font-size: 14px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.login>hr{
+    margin: 30px 15px;
+    border :.5px solid  #ebedf0;
+}
+.service>div{
+    margin: 15px 0 15px 15px;
+}
+.service>div>p{
+    margin-left: 10px;
+}
 
 
 
