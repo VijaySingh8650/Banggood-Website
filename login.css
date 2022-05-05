@@ -1,0 +1,243 @@
+@font-face{
+    src: url(fonts/CORBEL.TTF);
+    font-family: cor;
+}
+
+*{
+   font-family: cor;
+   margin: 0px;
+   padding: 0px;
+}
+.space_gift{
+    margin-left: 10px;
+    padding: 10px;
+}
+.nav{
+    /* border: 1px red solid; */
+    height: 75px;
+    background-color: white;
+  }
+  .nav_img_Logo{
+    /* border: 1px red solid; */
+    width: 20%;
+    margin-left: 200px;
+    margin-top: 20px;
+    background-color: transparent;
+    
+}
+.quick{
+    color: #999;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+}
+.bg{
+    background-color: white;
+}
+
+.container{
+    /* background-color: white; */
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 35px;
+    transform: translate(-50%, -50%);
+    padding: 24px 32px 32px;
+    width: 360px;
+    height: 400px;
+    /* margin:  */
+    /* border: 1px red solid; */
+    background-color: white;
+    border-radius: 5px;
+}
+.inner_container{
+    /* border: 1px red solid; */
+    height: auto;
+    width: 95%;
+    margin: auto;
+    
+}
+
+.signIn_reg{
+    /* border: 1px red solid; */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+   
+}
+p:nth-child(1) {
+    
+    color:#ff6e26;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    
+    border-bottom: 2px solid #ff6e26;
+}
+p:nth-child(2) {
+    
+    color:#000000;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 25px;
+    /* padding: 10px 25px; */
+    /* border-bottom: 2px solid #ff6e26; */
+    
+}
+
+
+.email_pass>input{
+    
+    /* border: 1px solid #ebebeb; */
+    font-size: 15px;
+    color: #161515;
+    border: 1px #666 solid;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    border-radius: 4px;
+    line-height: 10px;
+}
+
+
+
+a{
+  
+    font-size: 20px;
+    color: #999;
+}
+
+
+
+.btn{
+    color: white;
+    font-size: 18px;
+   font-weight: bold;
+    /* background-color: #ff6e26; */
+   background: linear-gradient(270deg,#ff4733,#ff6e26);
+    display: block;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0px;
+    width: 100%;
+    padding: 10px 95px 10px 95px ; 
+    border-radius: 4px;
+    /* border: 1px red solid; */
+    cursor: pointer;
+    border: none;
+
+}
+
+input[type="email"]::placeholder {  
+                  
+    padding-left: 10px; 
+} 
+
+input[type="password"]::placeholder {  
+   
+    padding-left: 10px; 
+} 
+.logo{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.icon{
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+#email_id{
+    color: #161515;
+    
+}
+h5{
+    margin-top: 10px;
+    color: #999;
+    font-weight: 100;
+    font-size: 15px;
+    cursor: pointer;
+    
+  
+}
+
+
+
+.link_pages{
+    text-decoration: none;
+    color:#000000;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 0px;
+    /* border-bottom: 2px solid #ff6e26; */
+ }
+ 
+ .link_pages2{
+     text-decoration: none;
+     color:#ff6e26;
+     font-weight: bold;
+     font-size: 20px;
+     cursor: pointer;
+  }
+   /*------------------------------------------------------------------------------------*/
+ /* footer start*/
+
+ .down_text p{
+    /* border: 1px red solid; */
+    color:#999;
+    width: 36%;
+    margin: auto;
+    margin-top: 20px;
+    /* margin-bottom: 800px; */
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+    
+ }
+ .upper_text>span:hover{
+     cursor: pointer;
+     /* border-bottom: 1px solid #666 ; */
+ }
+ .upper_text>span{
+     margin-right: 5px;
+     
+ }
+ .upper_text{
+     padding-top: 50px;
+    width: 100%;
+ 
+    /* border: 1px red solid; */
+     color:#666;
+   text-align: center;
+     
+ }
+ 
+
+ .hex{
+
+     /* height: 90px; */
+     /* border: 1px saddlebrown solid ; */
+ }
+ .hexc{
+
+    height: 650px;
+    /* border: 1px saddlebrown solid ; */
+    background-color: #f5f5f5;
+}
+.hexcc{
+
+    height: 200px;
+    /* border: 1px saddlebrown solid ; */
+}
