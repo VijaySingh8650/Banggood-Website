@@ -512,7 +512,7 @@ a{
     border-radius: 5px;
 }
 .contain2>div>h1{
-    margin: 10px 0;
+    margin: 10px 0 5px 0;
 }
 .contain2>div>div::after{
     content: "";
@@ -531,6 +531,7 @@ a{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    
 }
 .contain2>div>p:hover{
     color: #ff6e26;
@@ -545,4 +546,161 @@ a{
     display: block;
     margin: auto;
 }
+.atBottomLine{
+    margin:40px 0;
+    border-top: 1px solid #d0d3d7;
+}
+.show{
+    padding: 10px 20px;
+    background-color: #ff6e26;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    margin: auto;
+    border-radius: 20px;
+}
+.show>button{
+    font-weight: 700;
+    border: none;
+    background:none;
+    text-transform: uppercase;
+    color: white;
+}
+.bottomPart1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    margin: 0 20px;
+    padding-bottom: 20px;
+}
+.bottomPart1>div>img{
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+.bottomPart1>div>h1{
+    font-size: 14px;
+    text-align: center;
+    color: #333333;
+    margin: 10px 0 5px 0;
+}
+.bottomPart1>div>p{
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+}
+.white{
+    height: 20px;
+    width: 100%;
+    background-color: #f1f5f9;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 20px;
 
+}
+.know>h1, .payment>h1, .download>h1{
+    font-size: 14px;
+    color: #333333;
+}
+.know>p, .payment>p{
+    margin: 10px 0;
+    color: #666666;
+}
+.download>.app>div{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.download>.app>div>img{
+    height: 20px;
+}
+.download>.app{
+    display: flex;
+    margin-top: 20px;
+}
+.download>.app>div:nth-child(2){
+    margin-left: 20px;
+}
+.download>.app+h1{
+    margin-top: 40px;
+}
+.download>.social>div>img{
+    height: 15px;
+    
+}
+.download>.social{
+    display: flex;
+    margin-top: 20px;
+}
+.download>.social>div{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    border: 2px solid #333;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.subscribe{
+    margin-bottom: 40px;
+
+}
+.subscribe>p>a{
+    color:#666666 ;
+    text-decoration: underline;
+}
+.subscribe>p{
+    color: #666666;
+    text-align: center;
+}
+.subscribe>h1{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.subscribe>div>input{
+    border: none;
+    background:none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    width: 240px;
+    font-size: 14px;
+    padding: 10px 0;
+    display: block;
+    margin: auto;
+}
+
+.subscribe>div:hover input{
+    border-bottom: 2px solid #ff6e26;
+    
+}
+.subscribe>div{
+    display: flex;
+    width: 30%;
+    margin: auto;
+}
+.subscribe>div>div{
+    height: 30px;
+    width: 33px;
+    cursor: pointer;
+   
+}
+.subscribe>div:hover div{
+    background-image: url("Images Index/bottom-orag-right-arrow.png");
+    object-fit: cover;
+}
+.footer>p{
+    text-align: center;
+    color: #666666;
+    margin-bottom: 10px;
+}
