@@ -124,22 +124,38 @@ function check(){
 var email_input=document.getElementById("email_id").value;
 var pass_input=document.getElementById("password").value;
 
-
-for(var i = 0 ; i<user_data.length;i++)
+if(user_data=="")
+{
+  alert("Please Register First !!")
+  window.location.href="./register.html";
+}
+else{
+  for(var i = 0 ; i<user_data.length;i++)
 {
   if(email_input==user_data[i].email && pass_input == user_data[i].pass){
 
     alert(email_input + "is logged in !!!")
     window.location.href="./index.html";
+    break
   }
   else if(email_input==user_data[i].email && pass_input != user_data[i].pass){
     alert("!!! Invalid Email id and Password")
+    break
   }
   else if(email_input!=user_data[i].email && pass_input == user_data[i].pass){
     alert("!!! Invalid Email id and Password")
+    break
+  }
+  else if(email_input!=user_data[i].email && pass_input != user_data[i].pass){
+    alert("No User Found : Please Register First !!")
+    window.location.href="./register.html";
+    break
   }
 
 }
+}
+
+
 
 
 
