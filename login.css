@@ -18,11 +18,12 @@
     background-color: white;
   }
   .nav_img_Logo{
-    /* border: 1px red solid; */
+    border: 1px red solid;
     width: 20%;
     margin-left: 200px;
     margin-top: 20px;
     background-color: transparent;
+    cursor: pointer;
     
 }
 .quick{
