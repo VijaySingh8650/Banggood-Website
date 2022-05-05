@@ -34,7 +34,7 @@
               <p><a class="link_pages" href="register.html">REGISTER</a></p>           <!--     --> 
             </div>
 
-            <form id="form_reg" action="">                <!-- forms main bich wala    --> 
+                           <!-- forms main bich wala    --> 
               <div class="email_pass">
                 <input
                   type="email"
@@ -50,7 +50,7 @@
                 /><br />
               </div>
 
-              <button class="btn">Sign in</button>
+              <button id="login" class="btn">Sign in</button>
               <div class="">
                 <h5>Forgot your password ?</h5>
               </div>
@@ -82,7 +82,7 @@
                     alt=""
                 /></span>
               </div>
-            </form>
+           
           </div>
         </div>
       </div>
@@ -108,3 +108,46 @@
     </div>
   </body>
 </html>
+<script>
+
+var user_data = JSON.parse(localStorage.getItem("login_data")) || [];
+
+
+
+
+document.getElementById("login").addEventListener("click",check)
+
+
+
+
+function check(){
+var email_input=document.getElementById("email_id").value;
+var pass_input=document.getElementById("password").value;
+
+
+for(var i = 0 ; i<user_data.length;i++)
+{
+  if(email_input==user_data[i].email && pass_input == user_data[i].pass){
+
+    alert(email_input + "is logged in !!!")
+    window.location.href="./index.html";
+  }
+  else if(email_input==user_data[i].email && pass_input != user_data[i].pass){
+    alert("!!! Invalid Email id and Password")
+  }
+  else if(email_input!=user_data[i].email && pass_input == user_data[i].pass){
+    alert("!!! Invalid Email id and Password")
+  }
+
+}
+
+
+
+}
+
+
+
+
+  
+</script>
+
