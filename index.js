@@ -1,37 +1,124 @@
+var LogData = JSON.parse(localStorage.getItem("login_data"))|| [];
+if(LogData.length===0){
+    
+    document.querySelector(".hello>span").addEventListener("click",backSeeToLogin);
+    document.querySelector(".navbar-img").addEventListener("click",backToHome);
+    function backToHome(){
+        window.location.href="index.html";
+    }
+    document.querySelector(".women").addEventListener("click",backWomenToLogin);
+    document.querySelector(".jewelry").addEventListener("click",backWomenToLogin);
+    document.querySelector(".phone").addEventListener("click",backWomenToLogin);
+    function backWomenToLogin(){
+        window.location.href="login.html";
+    }
+    document.querySelector("#btnSign").addEventListener("click",backSignToLogin);
+    function backSignToLogin(){
+        window.location.href="login.html";
+    }
+    document.querySelector(".see").addEventListener("click",backSeeToLogin);
+    function backSeeToLogin(){
+        window.location.href="login.html";
+    }
+    document.querySelector(".show").addEventListener("click",backShowToLogin);
+    
+    function backShowToLogin(){
+        window.location.href="login.html";
+    }
+    function addToCart(ele){
+        window.location.href="login.html";
+    }
+    var box = document.querySelectorAll(".box");
+    for(i=0;i<box.length;i++){
+        box[i].addEventListener("click",backShowToLogin);
+    }
+}
+else{
+    //sign in name changed to logged email
+    var nameOfPerson = document.querySelector(".hello>span");
+    nameOfPerson.innerText=LogData[0].email;
+    nameOfPerson.style.cursor="auto";
 
+    //collection to women page
+    document.querySelector(".collection_box").addEventListener("click",goToWomenPage);
+    function goToWomenPage(){
+        window.location.href="women's.html";
+    }
+    
+    //women page, phone page, jewelry page redirected
+    document.querySelector(".women").addEventListener("click",goToWomenPage);
+    document.querySelector(".jewelry").addEventListener("click",backJewelryPage);
+    document.querySelector(".phone").addEventListener("click",backPhonePage);
+    function backJewelryPage(){
+        window.location.href="jewelry.html";
+    }
+    function backPhonePage(){
+        window.location.href="phone.html";
+    }
 
-var box = document.querySelectorAll(".box");
-box.forEach(function(ele){
-    ele.addEventListener("click",function(){
-        window.location.href="phones.html";
+    var box = document.querySelectorAll(".box");
+    for(i=0;i<box.length;i++){
+        box[i].addEventListener("click",backPhonePage);
+    }
+    
+
+    //sign out
+    var logOut = document.querySelector("#btnSign");
+    logOut.innerText="Sign out" 
+    logOut.addEventListener("click",function(){
+        window.location.href="login.html";
     })
-})
 
-//when button is clicked
-var btnJoin = document.querySelector("#btnJoin").addEventListener("click",function(){
-    window.location.href="login.html";
-})
-var btnSign = document.querySelector("#btnSign").addEventListener("click",function(){
-    window.location.href="login.html";
-})
+    //See more to women page
+    document.querySelector(".see").addEventListener("click",backSeeToLogin);
+    function backSeeToLogin(){
+        window.location.href="women's.html";
+    }
 
-// redirected to women page
-var women = document.querySelector(".women");
-women.addEventListener("click",function(){
-    window.location.href="women's.html";
-})
+    //show more to women page
+    document.querySelector(".show").addEventListener("click",backSeeToLogin);
+    
 
-//redirect to jewelry page
-var jewelry = document.querySelector(".jewelry");
-jewelry.addEventListener("click",function(){
-    window.location.href="jewelry.html";
-})
+    //add to cart
+    var productToCart=JSON.parse(localStorage.getItem("cart")) || [];
+    document.querySelector(".number>h1").innerText=productToCart.length;
+    function addToCart(ele){
+       productToCart.push(ele);
+       
+       check(productToCart);
+       
+       localStorage.setItem("cart",JSON.stringify(productToCart));
+       document.querySelector(".number>h1").innerText=productToCart.length;
+    }
+    
+}
+//anyone can go to cart easily
+document.querySelector(".cart").addEventListener("click",function(){
+    window.location.href="cart.html";
+});
 
-// redirect to phone page
-var phone = document.querySelector(".phone");
-phone.addEventListener("click",function(){
-    window.location.href="phone.html";
-})
+//check to duplicate in cart
+function check(productToCart){
+    var cartInItem = false;
+    for(i=0;i<productToCart.length;i++){
+        for(j=i+1;j<productToCart.length;j++){
+            if(productToCart[i].imageURL===productToCart[j].imageURL && productToCart[i].price===productToCart[j].price) {
+                productToCart.splice(j,1);
+                cartInItem = true;
+            }
+        }
+    }
+    if(cartInItem){
+        alert("item already added in cart");
+    }
+    else{
+        alert("item added in cart");
+    }
+    
+}
+
+
+
 
 
 //flash deals products
