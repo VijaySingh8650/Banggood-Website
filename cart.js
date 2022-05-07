@@ -140,8 +140,13 @@ function displayOncart(cartData){
 
 }
 document.querySelector(".container1").style.display="flex";
+var div = document.createElement("div");
 var total= document.querySelector(".total");
 total.style.marginTop="50px";
+total.style.background="#ffffff";
+total.style.width="30%";
+total.style.marginLeft="50px";
+total.style.paddingTop="20px";
 var coupon = document.createElement("p");
 coupon.innerText="COUPONS";
 coupon.style.color="#535766";
@@ -149,16 +154,22 @@ coupon.style.fontSize="14px";
 coupon.style.fontWeight="600";
 var input=document.createElement("input");
 input.setAttribute("type","text");
-input.setAttribute("","text");
+input.setAttribute("placeholder","Have a coupon?");
+input.style.color="#333";
+input.style.outline="none";
+input.style.height="20px";
 
-
+div.append(coupon,input);
+div.style.display="flex";
+div.style.alignItems="center";
+div.style.justifyContent="space-between";
 var submit=document.createElement("button");
 submit.innerText="Apply Now";
 var priceDetails = document.createElement("p");
 priceDetails.innerText="PRICE DETAILS "+"( "+cartData.length+" )";
 var h1 = document.createElement("h1");
 callToArray(arrayOfCardToPay);
-document.querySelector(".total").append(coupon,h1,priceDetails); 
+document.querySelector(".total").append(div,h1,priceDetails); 
 function del(ele,index,arrayOfCardToPay){
     cartData.splice(index,1);
     // sum = sum-ele.price;
