@@ -20,69 +20,83 @@ if(Email.length>0){
 }
 
 if(cartData.length>0){
-  var sum =0;
- var h1 = document.createElement("h1");     
- 
+ var array = [];
+var sum = 0;
 displayOncart(cartData);
 function displayOncart(cartData){
     document.querySelector(".bag").innerHTML="";
+    // var arrayOfCardToPay = [];
     cartData.map(function(ele,index){
        var div = document.createElement("div");
        var image = document.createElement("img");
-       image.style.height="150px";
+       image.style.height="140px";
        image.style.display="block";
        image.style.margin="auto";
        image.setAttribute("src",ele.imageURL);
        var div1 =document.createElement("div");
        var price = document.createElement("p");
        price.innerText=" ₹ "+ele.price;
-       var x =  ele.price;  
-
+     
+       var total = document.createElement("p");
+       sum = sum+ele.price;
+       
+       
+    //    var quantity = document.createElement("p");
+    //     quantity.innerText=0;
+    //     total.innerText="Total:- "+0;
+       
        price.style.fontSize="14px";
+       price.style.width="200px";
        price.style.color="#333";
        price.style.fontWeight="700";
        var select= document.createElement("select");
       
        var option1 = document.createElement("option");
        option1.setAttribute("value",0);
-       option1.innerText="Quantity";
+       option1.innerText="Qty:";
 
 
        var option2 = document.createElement("option");
        option2.setAttribute("value",1);
-       option2.innerText=1;
+       option2.innerText="Qty:"+1;
       
-       select.style.width="40px";
+       select.style.width="60px";
+       select.style.marginLeft="30px";
+    
+       select.style.outline="none";
+       select.style.border="3px solid white";
        
        
        var option3 = document.createElement("option");
        option3.setAttribute("value",2);
-       option3.innerText=2;
+       option3.innerText="Qty:"+2;
        select.append(option2,option3);
+     
        select.addEventListener("change",function(){
-        var selected = select.value;
-            price.innerText=" ₹ "+ selected*ele.price;
-            x=selected*ele.price;
-                
-           
-            
-                
-                
-            
-       })
-        localStorage.setItem("cartTotal",JSON.stringify(x));
-       
+              var selected = select.value;
+           price.innerText=" ₹ "+ele.price*selected;
+          if(selected===2){
+            sum = sum+ele.price;
+            total.innerText=Math.round(sum);
+            console.log(total.innerText);
+         }
+              
+        })
+  
     div1.append(price,select);
+    div1.style.width="200px";
     div1.style.margin="10px 0";
     div1.style.display="flex";
     div1.style.justifyContent="space-between";
+    div1.style.alignItems="center";
     var btn = document.createElement("button");
     btn.innerText = "Delete";
-    btn.style.background="none";2
+    btn.style.background="none";
+    btn.style.height="30px";
     btn.style.border="none";
     btn.style.color="white";
     btn.style.padding="5px 10px 5px 10px";
-    btn.style.borderRadius="2px";
+    btn.style.borderRadius="5px";
     btn.style.fontSize="12px";
     btn.style.cursor="pointer";
     btn.style.background="#ff4733";
@@ -90,28 +104,43 @@ function displayOncart(cartData){
         del(ele,index);
     })
     div.append(image,div1,btn);
-    div.style.margin="20px 10px 20px 10px";
+    div.style.margin="10px 10px 10px 10px";
+    div.style.display="flex";
     div.style.background="#ebedf0";
     div.style.padding="10px 10px 10px 10px";
+    div.style.borderRadius="5px";
     var bag = document.querySelector(".bag");
     bag.append(div);
-    bag.style.width="100%";
+    
+    total.innerText=Math.round(sum);
+    console.log(Math.round(sum));  
+    //new array of objects
+    // var obj={
+    //     image:ele.imageURL,
+    //     price:x,
+        
+
+    // }
+    // arrayOfCardToPay.push(obj);
+    // localStorage.setItem("cartToPay",JSON.stringify(arrayOfCardToPay));
+    bag.style.width="40%";
+    bag.style.marginLeft="50px";
     bag.style.display="grid";
-    bag.style.gridTemplateColumns="repeat(6, 1fr)";
+    bag.style.gridTemplateColumns="repeat(1, 1fr)";
     bag.style.gap="10px";
     bag.style.background="white";
     bag.style.marginTop="50px";
+   
     }) 
   
-        
-        
     
-    document.querySelector(".total").append(h1); 
+    // document.querySelector(".total").append(h1); 
 }
 function del(ele,index){
     cartData.splice(index,1);
-    sum=sum-ele.price;
-    h1.innerText=sum
+    sum = sum-ele.price;
+          
+    
     localStorage.setItem("cart",JSON.stringify(cartData));
     
    
@@ -120,6 +149,7 @@ function del(ele,index){
       location.reload();
     }
 }
+
 }
 
 else{

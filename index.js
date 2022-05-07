@@ -204,3 +204,21 @@ div.append(div1,h1,para);
 document.querySelector(".contain2").append(div);
     })
 }
+
+//reach to the social sites
+//facebook
+document.querySelector(".social>div:nth-child(1)").addEventListener("click",function(){
+    window.location.href="https://www.facebook.com/BanggoodIndia/";
+})
+//instagram
+document.querySelector(".social>div:nth-child(2)").addEventListener("click",function(){
+    window.location.href="https://www.instagram.com/banggood/?last_spm=1a985.Homepage.000144142.0001255229.7a933c3c765f4bbeacf62996aece2ad3";
+})
+//youtube
+document.querySelector(".social>div:nth-child(3)").addEventListener("click",function(){
+    window.location.href="https://www.youtube.com/user/BanggoodTV?last_spm=1a985.Homepage.000144142.0001255230.7a933c3c765f4bbeacf62996aece2ad3";
+})
+//twitter
+document.querySelector(".social>div:nth-child(4)").addEventListener("click",function(){
+    window.location.href="https://twitter.com/Banggood?last_spm=1a985.Homepage.000144142.0001255231.7a933c3c765f4bbeacf62996aece2ad3";
+})
