@@ -55,4 +55,6 @@ body{
 .navbar2>img{
     cursor: pointer;
 }
-
+.divHover:hover{
+   border: 1px solid #ff6e26;
+}

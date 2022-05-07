@@ -20,12 +20,12 @@ if(Email.length>0){
 }
 
 if(cartData.length>0){
- var array = [];
-var sum = 0;
+//   var sum=0;
+    var arrayOfCardToPay = [];
 displayOncart(cartData);
 function displayOncart(cartData){
     document.querySelector(".bag").innerHTML="";
-    // var arrayOfCardToPay = [];
+   
     cartData.map(function(ele,index){
        var div = document.createElement("div");
        var image = document.createElement("img");
@@ -36,14 +36,9 @@ function displayOncart(cartData){
        var div1 =document.createElement("div");
        var price = document.createElement("p");
        price.innerText=" ₹ "+ele.price;
-     
-       var total = document.createElement("p");
-       sum = sum+ele.price;
+
+       arrayOfCardToPay.push(ele.price);
        
-       
-    //    var quantity = document.createElement("p");
-    //     quantity.innerText=0;
-    //     total.innerText="Total:- "+0;
        
        price.style.fontSize="14px";
        price.style.width="200px";
@@ -70,18 +65,36 @@ function displayOncart(cartData){
        var option3 = document.createElement("option");
        option3.setAttribute("value",2);
        option3.innerText="Qty:"+2;
-       select.append(option2,option3);
+       var option4 = document.createElement("option");
+       option4.setAttribute("value",3);
+       option4.innerText="Qty:"+3;
+       var option5 = document.createElement("option");
+       option5.setAttribute("value",4);
+       option5.innerText="Qty:"+4;
+       select.append(option2,option3,option4);
      
        select.addEventListener("change",function(){
-              var selected = select.value;
-           price.innerText=" ₹ "+ele.price*selected;
-          if(selected===2){
-            sum = sum+ele.price;
-            total.innerText=Math.round(sum);
-            console.log(total.innerText);
-         }
+           var selected = select.value;
+           price.innerHTML=" ₹ "+ele.price*selected;
+           addToArray(ele,index,selected);
+       })
+       function  addToArray(ele,index,selected){
+           if(selected==="2"){
+              arrayOfCardToPay.splice(index,1,ele.price*2);
               
-        })
+            //   console.log(arrayOfCardToPay);
+           }
+           if(selected==="1"){
+            arrayOfCardToPay.splice(index,1,ele.price*1);
+            // console.log(arrayOfCardToPay);
+           }
+           if(selected==="3"){
+            arrayOfCardToPay.splice(index,1,ele.price*3);
+            // console.log(arrayOfCardToPay);
+           }
+           
+           callToArray(arrayOfCardToPay);
+       }
   
     div1.append(price,select);
     div1.style.width="200px";
@@ -99,11 +112,13 @@ function displayOncart(cartData){
     btn.style.borderRadius="5px";
     btn.style.fontSize="12px";
     btn.style.cursor="pointer";
-    btn.style.background="#ff4733";
+    btn.style.background="#ff6e26";
     btn.addEventListener("click",function(){
-        del(ele,index);
+        del(ele,index,arrayOfCardToPay);
+        
     })
     div.append(image,div1,btn);
+    div.setAttribute("class","divHover");
     div.style.margin="10px 10px 10px 10px";
     div.style.display="flex";
     div.style.background="#ebedf0";
@@ -112,17 +127,7 @@ function displayOncart(cartData){
     var bag = document.querySelector(".bag");
     bag.append(div);
     
-    total.innerText=Math.round(sum);
-    console.log(Math.round(sum));  
-    //new array of objects
-    // var obj={
-    //     image:ele.imageURL,
-    //     price:x,
-        
-
-    // }
-    // arrayOfCardToPay.push(obj);
-    // localStorage.setItem("cartToPay",JSON.stringify(arrayOfCardToPay));
+    
     bag.style.width="40%";
     bag.style.marginLeft="50px";
     bag.style.display="grid";
@@ -131,16 +136,37 @@ function displayOncart(cartData){
     bag.style.background="white";
     bag.style.marginTop="50px";
    
-    }) 
-  
-    
-    // document.querySelector(".total").append(h1); 
+}) 
+
 }
-function del(ele,index){
+document.querySelector(".container1").style.display="flex";
+var total= document.querySelector(".total");
+total.style.marginTop="50px";
+var coupon = document.createElement("p");
+coupon.innerText="COUPONS";
+coupon.style.color="#535766";
+coupon.style.fontSize="14px";
+coupon.style.fontWeight="600";
+var input=document.createElement("input");
+input.setAttribute("type","text");
+input.setAttribute("","text");
+
+
+var submit=document.createElement("button");
+submit.innerText="Apply Now";
+var priceDetails = document.createElement("p");
+priceDetails.innerText="PRICE DETAILS "+"( "+cartData.length+" )";
+var h1 = document.createElement("h1");
+callToArray(arrayOfCardToPay);
+document.querySelector(".total").append(coupon,h1,priceDetails); 
+function del(ele,index,arrayOfCardToPay){
     cartData.splice(index,1);
-    sum = sum-ele.price;
-          
-    
+    // sum = sum-ele.price;
+       arrayOfCardToPay.splice(index,1); 
+        location.reload(); 
+       
+        callToArray(arrayOfCardToPay);
+
     localStorage.setItem("cart",JSON.stringify(cartData));
     
    
@@ -149,7 +175,19 @@ function del(ele,index){
       location.reload();
     }
 }
+// console.log(arrayOfCardToPay);
 
+
+function callToArray(arrayOfCardToPay){
+    var sum=0;
+    for(i=0;i<arrayOfCardToPay.length;i++){
+        sum=sum+arrayOfCardToPay[i];
+    }
+    sum= Math.round(sum)
+    // console.log(sum);
+    h1.innerText="Total "+sum;
+}
+ 
 }
 
 else{
