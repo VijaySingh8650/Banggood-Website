@@ -1,0 +1,180 @@
+@font-face{
+    src: url(fonts/CORBEL.TTF);
+    font-family: cor;
+}
+
+*{
+   font-family: cor;
+   margin: 0px;
+   padding: 0px;
+   /* background-color: #f5f5f5; */
+}
+
+/*Nav start*/
+.nav{
+  /* border: 1px red solid; */
+  height: 75px;
+  background-color: white;
+}
+.nav_img_Logo{
+    /* border: 1px red solid; */
+    width: 20%;
+    margin-left: 200px;
+    margin-top: 20px;
+    background-color: transparent;
+    
+}
+
+
+/*Nav End */
+
+ /*------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+ /*------------------------------------------------------------------------------------*/
+ /* footer start*/
+
+ .down_text p{
+    /* border: 1px red solid; */
+    color:#999;
+    width: 36%;
+    margin: auto;
+    margin-top: 20px;
+    /* margin-bottom: 800px; */
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+    
+ }
+ .upper_text>span:hover{
+     cursor: pointer;
+     /* border-bottom: 1px solid #666 ; */
+ }
+ .upper_text>span{
+     margin-right: 5px;
+     
+ }
+ .upper_text{
+     padding-top: 50px;
+    width: 100%;
+ 
+    /* border: 1px red solid; */
+     color:#666;
+   text-align: center;
+     
+ }
+
+
+
+
+
+
+
+
+
+ .hexc{
+    overflow: auto;
+        height: 600px;
+        border: 1px #ffffff solid;
+        background-color: #f5f5f5;
+    }
+.hexcc{
+
+    height: 200px;
+    border: 1px rgb(255, 255, 255) solid ;
+    background-color: #fff;
+    
+
+
+
+
+
+
+
+
+}#card {
+    position: relative;
+    width: 320px;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+ font-family: cor;
+
+  }
+  
+  #upper-side {
+    padding: 2em;
+    background-color: #ff6e26;
+    display: block;
+    color: #fff;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-family: cor;
+  }
+  
+  #checkmark {
+    font-weight: lighter;
+    fill: #fff;
+    margin: -3.5em auto auto 20px;
+    font-family: cor;
+  }
+  
+  #status {
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    margin-top: -.2em;
+    margin-bottom: 0;
+  }
+  
+  #lower-side {
+    padding: 2em 2em 5em 2em;
+    background: #fff;
+    display: block;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  #message {
+    margin-top: -.5em;
+    color: #757575;
+    letter-spacing: 1px;
+    font-family: cor;
+  }
+  
+  #contBtn {
+    position: relative;
+    top: 1.5em;
+    text-decoration: none;
+    background:#ff6e26;
+    color: #fff;
+    margin: auto;
+    padding: .8em 3em;
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    border-radius: 25px;
+    -webkit-transition: all .4s ease;
+          -moz-transition: all .4s ease;
+          -o-transition: all .4s ease;
+          transition: all .4s ease;
+  }
+  
+  #contBtn:hover {
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -webkit-transition: all .4s ease;
+          -moz-transition: all .4s ease;
+          -o-transition: all .4s ease;
+          transition: all .4s ease;
+  }
