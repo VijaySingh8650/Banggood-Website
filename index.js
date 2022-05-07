@@ -81,17 +81,23 @@ else{
 
     //add to cart
     var productToCart=JSON.parse(localStorage.getItem("cart")) || [];
+   
     document.querySelector(".number>h1").innerText=productToCart.length;
     function addToCart(ele){
        productToCart.push(ele);
-       
+   
        check(productToCart);
        
        localStorage.setItem("cart",JSON.stringify(productToCart));
+      
        document.querySelector(".number>h1").innerText=productToCart.length;
+       
     }
     
+    
 }
+
+
 //anyone can go to cart easily
 document.querySelector(".cart").addEventListener("click",function(){
     window.location.href="cart.html";
@@ -103,6 +109,8 @@ function check(productToCart){
     for(i=0;i<productToCart.length;i++){
         for(j=i+1;j<productToCart.length;j++){
             if(productToCart[i].imageURL===productToCart[j].imageURL && productToCart[i].price===productToCart[j].price) {
+               
+                
                 productToCart.splice(j,1);
                 cartInItem = true;
             }
@@ -114,6 +122,7 @@ function check(productToCart){
     else{
         alert("item added in cart");
     }
+   
     
 }
 
