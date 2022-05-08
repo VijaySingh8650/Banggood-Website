@@ -209,8 +209,7 @@ submit.addEventListener("click",function(){
         alert("Congrats! You have got 10% OFF");
         couponDiscountAmount.innerText="₹ "+Number(h2.innerText)*10/100;
         
-        submit.disabled=true;
-            input.disabled=true;
+        
        
         totalAmount.innerText="₹ "+(Number(h2.innerText)-(Number(h2.innerText)*10/100));
     }
@@ -310,10 +309,10 @@ function callToArray(arrayOfCardToPay){
     if(sum<=3000){
        couponDiscountAmount.innerText=0;
     }
-    if(Number(h2.innerText)>3000){
-        submit.disabled=false;
-        input.disabled=false;
-    }
+    // if(Number(h2.innerText)<=3000){
+    //     submit.disabled=false;
+    //     input.disabled=false;
+    // }
     
 }
  
