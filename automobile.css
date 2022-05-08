@@ -1,0 +1,253 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#main_container{
+    display: flex;
+    /* border: 1px solid; */
+    width: 85%;
+    height: auto;
+    margin: auto;
+
+}
+
+#categories{
+    /* border: 3px solid green; */
+    width: 20%;
+    height: 1600px;
+    margin-top: 50px;
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+
+}
+#categories>h2{
+    font-family: sans-serif;
+    font-size: 16px;
+    height: 19px;
+    color: #333;
+    font-weight: 550;
+    letter-spacing: .5px;
+}
+#categories>h3{
+    margin-left: 15px;
+    margin-top: 7px;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+#categories>p{
+    margin-left: 28px;
+    margin-top: 9px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: gray;
+    
+}
+
+
+#products{
+    /* border: 3px solid red; */
+    width: 80%;
+    margin-top: 50px;
+
+}
+
+/* product page css */
+
+
+#homeandcategories{
+    display: flex;
+}
+
+
+#homeandcategories>a{
+    font-family: sans-serif;
+    color: rgb(161, 158, 158);
+    word-spacing: 3px;
+}
+
+#homeandcategories>h4{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+/* pricefilter */
+
+#pricefilter{
+    /* border: 1px solid; */
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+
+#pricefilter>#price{
+    font-family: sans-serif;
+    color: rgb(93, 93, 93);
+    font-size: 15px;
+    margin-right: 10px;
+}
+#pricefilter>input{
+    padding: 10px 20px 10px 20px;
+    width: 30px;
+    border-radius: 5px;
+    border: .5px solid gray;
+}
+#pricefilter>button{
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: .5px solid gray;
+    cursor: pointer;
+    background-color: white;
+    margin-left: 10px;
+}
+select{
+    margin-left: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    width: 150px;
+}
+#check{
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: rgb(232, 83, 25);
+
+    
+    transform: scale(1.7);
+    
+}
+label{
+    cursor: pointer;
+}
+
+/* shortby */
+
+#shortby{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#shortby>p{
+    font-family: sans-serif;
+    color: rgb(93, 93, 93);
+    font-size: 15px;
+    
+    margin-right: 10px;
+}
+#shortbox{
+    display: flex;
+    border: .5px solid grey;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    
+}
+#shortbox>p{
+    margin-right: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+}
+.br{
+    color: rgb(203, 201, 201);
+}
+#shortbox>p:nth-child(1){
+    color: #FF6e26;
+}
+
+/* productlist  */
+
+#productslist{
+    /* border: 1px solid red; */
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 50px;
+    
+
+}
+h2+div{
+    display: flex;
+}
+#productslist>div{
+    /* border: 1px solid green; */
+   /* height: 30px; */
+   line-height: 25px;
+}
+#productslist>div>img{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#productslist>div>img:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+}
+#productslist>div>h2{
+    color: #FF4733;
+    font-family: sans-serif;
+}
+div>strike{
+    font-family: sans-serif;
+    color: #666666;
+}
+strike+p{
+    font-family: sans-serif;
+    color: #666666;
+    margin-left: 10px;
+    font-size: 15px;
+}
+#box>p{
+    font-family: sans-serif;
+    color: #999999;
+    font-size: 13px;
+}
+#showMore{
+    padding: 10px 20px 10px 20px;
+    margin-left: 45%;
+    margin-right: 40%;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: #FF6e26;
+    color: white;
+    border: none;
+   
+}
+@media all and (min-width: 451px) and (max-width: 750px){
+    #productslist{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px 200px;
+    row-gap: 100px;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box4";
+}
+
+}
+@media all and (min-width: 100px) and (max-width: 450px){
+    #productslist{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-areas: 
+    "box1"
+    "box2"
+    "box3"
+    "box4";
+    
+}
+
+}
