@@ -129,7 +129,7 @@ function displayOncart(cartData){
     
     
     bag.style.width="40%";
-    bag.style.marginLeft="50px";
+    bag.style.marginLeft="200px";
     bag.style.display="grid";
     bag.style.gridTemplateColumns="repeat(1, 1fr)";
     bag.style.gap="10px";
@@ -142,11 +142,18 @@ function displayOncart(cartData){
 document.querySelector(".container1").style.display="flex";
 var div = document.createElement("div");
 var total= document.querySelector(".total");
-total.style.marginTop="50px";
+// total.style.marginLeft="50px";
 total.style.background="#ffffff";
-total.style.width="30%";
-total.style.marginLeft="50px";
-total.style.paddingTop="20px";
+total.style.border="1px solid #424553";
+total.style.width="20%";
+total.style.height="auto";
+total.style.position="fixed";
+total.style.right="120px";
+total.style.top="120px";
+
+// total.style.marginRight="50px";
+total.style.padding="10px 10px 10px 10px";
+
 var coupon = document.createElement("p");
 coupon.innerText="COUPONS";
 coupon.style.color="#535766";
@@ -158,18 +165,116 @@ input.setAttribute("placeholder","Have a coupon?");
 input.style.color="#333";
 input.style.outline="none";
 input.style.height="20px";
+input.style.paddingLeft="10px";
 
-div.append(coupon,input);
+div.style.margin="5px 0 10px 0";
 div.style.display="flex";
 div.style.alignItems="center";
 div.style.justifyContent="space-between";
 var submit=document.createElement("button");
-submit.innerText="Apply Now";
+submit.innerText="Apply";
+submit.style.background="none";
+submit.style.padding="4px";
+submit.style.color="#ff6e26";
+submit.style.fontSize="14px";
+submit.style.fontWeight="600";
+submit.style.border="1px solid #ff6e26"
+submit.style.cursor="pointer";
+
+div.append(input,submit);
 var priceDetails = document.createElement("p");
-priceDetails.innerText="PRICE DETAILS "+"( "+cartData.length+" )";
+priceDetails.innerText="PRICE DETAILS "+"("+cartData.length+" items)";
+priceDetails.style.color="#535766";
+priceDetails.style.fontSize="14px";
+priceDetails.style.fontWeight="600";
+priceDetails.style.marginTop="50px";
+var couponDiscount = document.createElement("p");
+var couponDiscountAmount = document.createElement("p");
+couponDiscount.innerText = "Coupon Discount";
+couponDiscount.style.color="#282c3f";
+couponDiscount.style.fontSize="14px";
+couponDiscount.style.fontWeight="500";
+couponDiscountAmount.innerText=0;
+couponDiscountAmount.style.color="#282c3f";
+couponDiscountAmount.style.fontSize="14px";
+couponDiscountAmount.style.fontWeight="500";
+var divCoupon = document.createElement("div");
+divCoupon.append(couponDiscount,couponDiscountAmount);
+divCoupon.style.display="flex";
+divCoupon.style.display="flex";
+divCoupon.style.margin="10px 0";
+divCoupon.style.justifyContent="space-between";
+submit.addEventListener("click",function(){
+    if(input.value==="grab10" && Number(h2.innerText)>3000){
+        alert("Congrats! You have got 10% OFF");
+        couponDiscountAmount.innerText="₹ "+Number(h2.innerText)*10/100;
+        
+        submit.disabled=true;
+            input.disabled=true;
+       
+        totalAmount.innerText="₹ "+(Number(h2.innerText)-(Number(h2.innerText)*10/100));
+    }
+    if(input.value!=="grab10" && Number(h2.innerText)>3000){
+        alert("You have put wrong coupon, it is 'grab10'");
+    }
+    if(Number(h2.innerText)<=3000){
+        alert("You must have amount more than ₹ 3000");
+    }
+});
+
+
 var h1 = document.createElement("h1");
+var h2 = document.createElement("h1");
+var amountTotal=document.createElement("h1");
+amountTotal.innerText="Total MRP";
+amountTotal.style.color="#282c3f";
+amountTotal.style.fontSize="14px";
+amountTotal.style.fontWeight="500";
+var divTotal = document.createElement("div");
+divTotal.append(amountTotal,h1);
+divTotal.style.display="flex";
+divTotal.style.margin="10px 0";
+divTotal.style.justifyContent="space-between";
+var hr = document.createElement("hr");
+var totalAmount = document.createElement("h1");
+totalAmount.style.color="#535766";
+totalAmount.style.fontSize="14px";
+totalAmount.style.fontWeight="600";
+var totalAmountDis = document.createElement("h1");
+totalAmountDis.innerText="Total Amount"
+totalAmountDis.style.color="#535766";
+totalAmountDis.style.fontSize="14px";
+totalAmountDis.style.fontWeight="600";
+
+var divTotalAmount=document.createElement("div");
+divTotalAmount.append(totalAmountDis,totalAmount);
+divTotalAmount.style.display="flex";
+divTotalAmount.style.margin="10px 0";
+divTotalAmount.style.justifyContent="space-between";
+
+//calling the function at starting
 callToArray(arrayOfCardToPay);
-document.querySelector(".total").append(div,h1,priceDetails); 
+
+
+//button to reach to place order
+var btn = document.createElement("button");
+btn.innerText = "Place Order";
+btn.style.display="block";
+btn.style.margin="auto";
+btn.style.width="100%";
+btn.style.padding="5px 0";
+btn.style.background="#ff6e26";
+btn.style.border="none";
+btn.style.borderRadius="5px";
+btn.style.color="#ffffff";
+btn.style.cursor="pointer";
+btn.addEventListener("click",function(){
+    window.location.href="payment.html";
+})
+//appending all the elements
+document.querySelector(".total").append(coupon,div,priceDetails,divTotal,divCoupon,hr,divTotalAmount,btn); 
+
+
 function del(ele,index,arrayOfCardToPay){
     cartData.splice(index,1);
     // sum = sum-ele.price;
@@ -196,7 +301,20 @@ function callToArray(arrayOfCardToPay){
     }
     sum= Math.round(sum)
     // console.log(sum);
-    h1.innerText="Total "+sum;
+    h1.innerHTML="<span>₹</span>"+" "+sum;
+    h2.innerText=sum;
+    h1.style.color="#282c3f";
+    h1.style.fontSize="14px";
+    h1.style.fontWeight="500";
+    totalAmount.innerText=h1.innerText;
+    if(sum<=3000){
+       couponDiscountAmount.innerText=0;
+    }
+    if(Number(h2.innerText)>3000){
+        submit.disabled=false;
+        input.disabled=false;
+    }
+    
 }
  
 }
