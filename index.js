@@ -3,6 +3,7 @@ if(LogData.length===0){
     
     document.querySelector(".hello>span").addEventListener("click",backSeeToLogin);
     document.querySelector(".navbar-img").addEventListener("click",backToHome);
+    document.querySelector(".automobile").addEventListener("click",backToHome);
     function backToHome(){
         window.location.href="index.html";
     }
@@ -55,7 +56,10 @@ else{
     function backPhonePage(){
         window.location.href="phone.html";
     }
-
+    document.querySelector(".automobile").addEventListener("click",goToAutomobilePage);
+    function goToAutomobilePage(){
+        window.location.href="automobile.html";
+    }
     var box = document.querySelectorAll(".box");
     for(i=0;i<box.length;i++){
         box[i].addEventListener("click",backPhonePage);
