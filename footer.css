@@ -1,0 +1,123 @@
+.white{
+    
+    height: 20px;
+    width: 100%;
+    background-color: #f1f5f9;
+    margin-top: 100px solid rgb(167, 167, 167);
+   
+}
+.bottom{
+    background-color: rgb(167, 167, 167);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px solid rgb(167, 167, 167);
+    margin-bottom: 20px solid rgb(167, 167, 167);
+
+}
+.know>h1, .payment>h1, .download>h1{
+    font-size: 14px;
+    color: #333333;
+}
+.know>p, .payment>p{
+    margin: 10px 0;
+    color: #666666;
+}
+.download>.app>div{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.download>.app>div>img{
+    height: 20px;
+}
+.download>.app{
+    display: flex;
+    margin-top: 20px;
+}
+.download>.app>div:nth-child(2){
+    margin-left: 20px;
+}
+.download>.app+h1{
+    margin-top: 40px;
+}
+.download>.social>div>img{
+    height: 15px;
+    
+}
+.download>.social{
+    display: flex;
+    margin-top: 20px;
+}
+.download>.social>div{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    border: 2px solid #333;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.subscribe{
+    background-color: rgb(167, 167, 167);
+    margin-bottom: 40px solid rgb(167, 167, 167);
+
+}
+.subscribe>p>a{
+    color:#666666 ;
+    text-decoration: underline;
+}
+.subscribe>p{
+    color: #666666;
+    text-align: center;
+}
+.subscribe>h1{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.subscribe>div>input{
+    border: none;
+    background:none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    width: 240px;
+    font-size: 14px;
+    padding: 10px 0;
+    display: block;
+    margin: auto;
+}
+
+.subscribe>div:hover input{
+    border-bottom: 2px solid #ff6e26;
+    
+}
+.subscribe>div{
+    display: flex;
+    width: 30%;
+    margin: auto;
+}
+.subscribe>div>div{
+    height: 30px;
+    width: 33px;
+    cursor: pointer;
+   
+}
+.subscribe>div:hover div{
+    background-image: url("Images Index/bottom-orag-right-arrow.png");
+    object-fit: cover;
+}
+.footer{
+    background-color: rgb(167, 167, 167);
+}
+.footer>p{
+    text-align: center;
+    color: #666666;
+    margin-bottom: 10px solid rgb(167, 167, 167);
+}
