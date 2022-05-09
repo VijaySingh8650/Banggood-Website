@@ -1,3 +1,7 @@
+var LogData = JSON.parse(localStorage.getItem("login_data"));
+var nameOfPerson = document.querySelector(".hello>span");
+    nameOfPerson.innerText=LogData[0].email;
+    nameOfPerson.style.cursor="auto";
 var productData=[{img:"https://imgaz3.staticbg.com/thumb/gallery/oaupload/banggood/images/09/E1/740964fd-63f1-4a46-a62f-c6b29aa8333b.jpg.webp",
                     price:"18,703.41",
                     strikeprice:"₹18,703.41",

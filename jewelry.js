@@ -1,3 +1,7 @@
+var LogData = JSON.parse(localStorage.getItem("login_data"));
+var nameOfPerson = document.querySelector(".hello>span");
+    nameOfPerson.innerText=LogData[0].email;
+    nameOfPerson.style.cursor="auto";
 var data=[{imageURL:"https://imgaz3.staticbg.com/thumb/gallery/oaupload/banggood/images/53/B7/cebb66f6-d4b1-4782-92a6-d580c7540c01.jpg.webp",price:"₹392.04",strikePrice:"₹10.99",offPercentage:" 53% Off",about:"African Hallow Braided circle",id:"jewelry"+1,q:1},
 {imageURL:"https://imgaz3.staticbg.com/thumb/gallery/oaupload/banggood/images/A3/F5/d5f97e83-7928-4a8a-8800-ea0a5558b6b5.jpg.webp",price:"₹7.68",strikePrice:"₹14.99",offPercentage:" 49% Off",about:"925 strailing silvr",id:"jewelry"+2,q:1},
 {imageURL:"https://imgaz1.staticbg.com/thumb/gallery/oaupload/banggood/images/FE/98/449b8158-1171-440c-813c-cf8bd75f771c.jpg.webp",price:"₹13.11",strikePrice:"₹19.99",offPercentage:" 34% Off",about:"bohimen creative luminious",id:"jewelry"+3,q:1},
