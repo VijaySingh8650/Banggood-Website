@@ -1,3 +1,8 @@
+var imageClick = document.querySelector(".navbar>img");
+imageClick.style.cursor="pointer";
+imageClick.addEventListener("click",function(){
+    window.location.href="index.html";
+})
 var LogData = JSON.parse(localStorage.getItem("login_data"))|| [];
 if(LogData.length===0){
     
