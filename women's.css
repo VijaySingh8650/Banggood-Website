@@ -1,0 +1,168 @@
+body{
+  font-family: OpenSans,Arial;
+  background-color: rgb(255,255,255);
+
+}
+#jewelryTop {
+  display: flex;
+  margin-top: 100px;
+}
+#jewelryTopLeft {
+  margin-top: 2vw;
+  height: 50vw;
+  width: 17.5vw;
+  margin-right: 1vw;
+  /* border: 1px solid red; */
+}
+#jewelryTopRight {
+ 
+  height: 52vw;
+  padding-right: 4vw;
+  width: 77.5vw;
+  overflow-y: scroll;
+}
+
+#jewelryTopRightTop {
+  margin-top: 2vw;
+  height: 5vw;
+  width: 80vw;
+  /* border: 1px solid red; */
+}
+#jewelryTopRightBottom {
+  width: 80vw;
+  /* border: 1px solid red; */
+
+  display: grid;
+  grid-gap: 1vw;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: repeat(12, 27vw); */
+}
+.hideScroll::-webkit-scrollbar {
+  display: none;
+}
+#jewelryFooter {
+  margin-top: 14vw;
+  height: 50vw;
+  background-color: rgb(247,247,247);
+}
+#jewelryTopLeft > h3 {
+  font-size: 0.95rem;
+  margin-left: 1.8vw;
+  opacity: 0.7;
+  margin-bottom: -0.5vw;
+}
+#jewelryTopLeft > p {
+  margin-top: 0.7vw;
+  color: #666;
+  font-size: 0.92rem;
+  margin-left: 2.3vw;
+  margin-bottom: 0.6vw;
+}
+#jewelryTopLeft > h4 {
+  font-size: 0.90rem;
+ 
+  opacity: 0.7;
+  margin-left: 2.8vw;
+  margin-bottom: 0.35vw;
+}
+#jewelryTopLeft > a {
+  font-size: 0.87rem;
+  color: #666;;
+  display: block;
+  margin-left: 3.6vw;
+  margin-bottom: 0.35vw;
+  text-decoration: none;
+}
+#jewelryTopLeft > a:hover {
+  color: rgb(255,110,38);
+  text-decoration: underline;
+}
+#jewelryTopRightBottom > div {
+
+  margin-top: 5vw;
+}
+#jewelryTopRightBottom > div > img {
+
+  width: 100%;
+  border-radius: 1vw;
+}
+#jewelryTopRightBottom > div >:hover~img:nth-child(2) {
+  z-index: 1;
+     }
+  
+#jewelryTopRightBottom > div > img +img{
+  height: 20px;
+  width: 20px;
+  position: relative;
+  right: 50px;
+  bottom: 30px;
+  z-index: -1;
+}
+#jewelryTopRightBottom > div > h2 {
+  color: rgb(255, 71, 51);
+  font-size: 0.95rem;
+  margin-bottom: 0.2vw;
+}
+ #jewelryTopRightBottom > div > p>span{ 
+  text-decoration-line:0.1vw;
+  text-decoration-color: #666;
+  color: #666;;
+  font-size: 0.95rem;
+
+
+
+  text-decoration: line-through;
+  
+} 
+#jewelryTopRightBottom > div > a {
+  margin-top: 0.2vw;
+  display: block;
+  color: #666;
+  font-size: 0.95rem;
+ 
+
+  text-decoration: none;
+}
+#jewelryTopRightBottom > div > a:hover {
+  color: rgb(255,110,38);
+  text-decoration: underline;
+}
+#jewelryTopRightTop>p{
+display: inline-block;
+}
+#jewelryTopRightTop>h4{
+  display: inline-block;
+  color: #666;
+  font-size: 0.92rem;
+  }
+#jewelryTopRightTop>a{
+  color: #666;
+  font-size: 0.92rem;
+  text-decoration: none;
+  }
+  #jewelryTopRightTop>a:hover{
+    text-decoration:underline;
+  }
+  #jewelryTopRightTop>input{
+      text-align: center;
+margin-top: 1vw;
+  }
+  #jewelryTopRightTop>input::-webkit-outer-spin-button,
+  #jewelryTopRightTop>input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#jewelryTopRightTop>h4{
+  margin-top: 1vw;
+}
+#jewelryTopRightTop>button{
+  padding: 0.3vw;
+  margin-top: 1vw;
+  background-color: rgb(255,110,38);
+  color: white;
+  border-radius: 0.4vw;
+  border: none;
+}
+#jewelryFooter1{
+  margin-top: 100px solid rgb(167, 167, 167);
+}
