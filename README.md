@@ -1,2 +1,2 @@
-# Banggood-Website
+# Banggood-Website Clone
 Banggood is an Ecommerce-website which also deals with electronics items. It was a group project with a team of 6 members. 
