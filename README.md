@@ -3,7 +3,7 @@ Banggood is an Ecommerce-website which also deals with electronics items. It was
 
   ## Tech Stacks 🛠
     
-    HTML 5, CSS, JavaScript and LocalStorage
+    HTML 5, CSS, JavaScript and react.js LocalStorage
     
   ## Team Members :-
    
